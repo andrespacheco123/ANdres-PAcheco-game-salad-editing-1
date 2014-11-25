@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<scene PGFVersion="0.19" GSCVersion="0.10.4" id="id562963">
+  <layers>
+    <layer id="id771562">
+      <actors>
+        <actor id="id852197" prototype="id469187">
+          <attributes>
+            <point id="position">
+              <real id="x">235.5</real>
+              <real id="y">160</real>
+            </point>
+            <size id="size">
+              <real id="width">600</real>
+              <real id="height">370</real>
+            </size>
+          </attributes>
+          <behaviors>
+            <behavior id="id739518" class="NoteBehavior" enabled="true">
+              <attributes>
+                <text id="name">Note</text>
+                <text id="bundleName">Note.behavior</text>
+                <text id="note">static art work
+</text>
+              </attributes>
+            </behavior>
+            <behavior id="id928038" class="PlaySoundAction" enabled="true">
+              <attributes>
+                <text id="name">Play Sound</text>
+                <text id="bundleName">PlaySound.behavior</text>
+                <sound id="soundName">Calvin_Harris_feat</sound>
+                <boolean id="loop">false</boolean>
+                <boolean id="runToCompletion">true</boolean>
+                <boolean id="positional">false</boolean>
+                <boolean id="dopplerShift">false</boolean>
+                <real id="volume">10</real>
+                <real id="pitch">1</real>
+              </attributes>
+            </behavior>
+          </behaviors>
+          <aspects>
+            <graphics>
+              <attributes>
+                <integer id="tileWidth" name="tileWidth">0</integer>
+                <integer id="tileHeight" name="tileHeight">0</integer>
+              </attributes>
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id159906" prototype="id434921">
+          <attributes>
+            <point id="position">
+              <real id="x">34.5</real>
+              <real id="y">349</real>
+            </point>
+            <size id="size">
+              <real id="width">152</real>
+              <real id="height">36</real>
+            </size>
+          </attributes>
+          <aspects>
+            <graphics>
+              <attributes>
+                <integer id="tileWidth" name="tileWidth">0</integer>
+                <integer id="tileHeight" name="tileHeight">0</integer>
+              </attributes>
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id757738" prototype="id592727">
+          <attributes>
+            <point id="position">
+              <real id="x">112</real>
+              <real id="y">135.5</real>
+            </point>
+          </attributes>
+          <behaviors>
+            <behavior id="id194574" class="ConstrainAttributeBehavior" enabled="true">
+              <attributes>
+                <text id="name">Constrain Attribute</text>
+                <text id="bundleName">ConstrainAttribute.behavior</text>
+                <text id="targetAttribute">game.attributes.id249994</text>
+                <text id="RHS">
+                  <expression>
+                    <reference keypath="self.attributes.position.x" />
+                  </expression>
+                </text>
+              </attributes>
+            </behavior>
+            <behavior id="id427404" class="ConstrainAttributeBehavior" enabled="true">
+              <attributes>
+                <text id="name">Constrain Attribute</text>
+                <text id="bundleName">ConstrainAttribute.behavior</text>
+                <text id="targetAttribute">game.attributes.id781198</text>
+                <text id="RHS">
+                  <expression>
+                    <reference keypath="self.attributes.position.y" />
+                  </expression>
+                </text>
+              </attributes>
+            </behavior>
+            <behavior id="id682813" class="CompoundBehavior" enabled="true">
+              <attributes>
+                <text id="name">Typical Movement Behaviors for 8 way digital movement.</text>
+                <text id="bundleName">Group.behavior</text>
+              </attributes>
+              <behaviors>
+                <behavior id="id672431" class="RuleBehavior" enabled="true">
+                  <attributes>
+                    <text id="name">Up</text>
+                    <text id="bundleName">Rule.behavior</text>
+                    <real id="compoundConditionKind">0</real>
+                  </attributes>
+                  <conditions>
+                    <condition id="id282744" eventType="key" pluginPredicateTypeIndex="0">
+                      <attributes>
+                        <index id="conditionType">0</index>
+                      </attributes>
+                      <predicate type="key">
+                        <attributes>
+                          <text id="mode">down</text>
+                          <text id="keyString">up</text>
+                        </attributes>
+                      </predicate>
+                    </condition>
+                  </conditions>
+                  <behaviors>
+                    <behavior id="id322309" class="AnimateBehavior" enabled="true">
+                      <attributes>
+                        <text id="name">Animate</text>
+                        <text id="bundleName">Animate.behavior</text>
+                        <text id="images">Buddy2	Buddy1</text>
+                        <index id="speed">6</index>
+                        <boolean id="loop">true</boolean>
+                        <boolean id="restoreActorImage">true</boolean>
+                      </attributes>
+                    </behavior>
+                    <behavior id="id820240" class="MoveBehavior" enabled="true">
+                      <attributes>
+                        <text id="name">Move</text>
+                        <text id="bundleName">Move.behavior</text>
+                        <angle id="direction">90</angle>
+                        <index id="space">0</index>
+                        <index id="moveType">0</index>
+                        <real id="speed">80</real>
+                        <boolean id="haltWhenBehaviorStops">true</boolean>
+                      </attributes>
+                    </behavior>
+                  </behaviors>
+                </behavior>
+                <behavior id="id675583" class="RuleBehavior" enabled="true">
+                  <attributes>
+                    <text id="name">Down</text>
+                    <text id="bundleName">Rule.behavior</text>
+                    <real id="compoundConditionKind">0</real>
+                  </attributes>
+                  <conditions>
+                    <condition id="id383916" eventType="key" pluginPredicateTypeIndex="0">
+                      <attributes>
+                        <index id="conditionType">0</index>
+                      </attributes>
+                      <predicate type="key">
+                        <attributes>
+                          <text id="mode">down</text>
+                          <text id="keyString">down</text>
+                        </attributes>
+                      </predicate>
+                    </condition>
+                  </conditions>
+                  <behaviors>
+                    <behavior id="id496570" class="MoveBehavior" enabled="true">
+                      <attributes>
+                        <text id="name">Move</text>
+                        <text id="bundleName">Move.behavior</text>
+                        <angle id="direction">270</angle>
+                        <index id="space">0</index>
+                        <index id="moveType">0</index>
+                        <real id="speed">80</real>
+                        <boolean id="haltWhenBehaviorStops">true</boolean>
+                      </attributes>
+                    </behavior>
+                    <behavior id="id232051" class="AnimateBehavior" enabled="true">
+                      <attributes>
+                        <text id="name">Animate</text>
+                        <text id="bundleName">Animate.behavior</text>
+                        <text id="images">Buddy2	Buddy1</text>
+                        <index id="speed">6</index>
+                        <boolean id="loop">true</boolean>
+                        <boolean id="restoreActorImage">true</boolean>
+                      </attributes>
+                    </behavior>
+                  </behaviors>
+                </behavior>
+                <behavior id="id962332" class="RuleBehavior" enabled="true">
+                  <attributes>
+                    <text id="name">Left</text>
+                    <text id="bundleName">Rule.behavior</text>
+                    <real id="compoundConditionKind">0</real>
+                  </attributes>
+                  <conditions>
+                    <condition id="id461844" eventType="key" pluginPredicateTypeIndex="0">
+                      <attributes>
+                        <index id="conditionType">0</index>
+                      </attributes>
+                      <predicate type="key">
+                        <attributes>
+                          <text id="mode">down</text>
+                          <text id="keyString">left</text>
+                        </attributes>
+                      </predicate>
+                    </condition>
+                  </conditions>
+                  <behaviors>
+                    <behavior id="id630444" class="ChangeAttributeAction" enabled="true">
+                      <attributes>
+                        <text id="name">Change Attribute</text>
+                        <text id="bundleName">ChangeAttribute.behavior</text>
+                        <text id="targetAttribute">self.aspects.graphics.attributes.flipHorizontally</text>
+                        <text id="RHS">true</text>
+                      </attributes>
+                    </behavior>
+                    <behavior id="id566987" class="AnimateBehavior" enabled="true">
+                      <attributes>
+                        <text id="name">Animate</text>
+                        <text id="bundleName">Animate.behavior</text>
+                        <text id="images">Buddy2	Buddy1</text>
+                        <index id="speed">6</index>
+                        <boolean id="loop">true</boolean>
+                        <boolean id="restoreActorImage">true</boolean>
+                      </attributes>
+                    </behavior>
+                    <behavior id="id673474" class="MoveBehavior" enabled="true">
+                      <attributes>
+                        <text id="name">Move</text>
+                        <text id="bundleName">Move.behavior</text>
+                        <angle id="direction">180</angle>
+                        <index id="space">0</index>
+                        <index id="moveType">0</index>
+                        <real id="speed">80</real>
+                        <boolean id="haltWhenBehaviorStops">true</boolean>
+                      </attributes>
+                    </behavior>
+                  </behaviors>
+                </behavior>
+                <behavior id="id274970" class="RuleBehavior" enabled="true">
+                  <attributes>
+                    <text id="name">Right</text>
+                    <text id="bundleName">Rule.behavior</text>
+                    <real id="compoundConditionKind">0</real>
+                  </attributes>
+                  <conditions>
+                    <condition id="id816804" eventType="key" pluginPredicateTypeIndex="0">
+                      <attributes>
+                        <index id="conditionType">0</index>
+                      </attributes>
+                      <predicate type="key">
+                        <attributes>
+                          <text id="mode">down</text>
+                          <text id="keyString">right</text>
+                        </attributes>
+                      </predicate>
+                    </condition>
+                  </conditions>
+                  <behaviors>
+                    <behavior id="id909713" class="ChangeAttributeAction" enabled="true">
+                      <attributes>
+                        <text id="name">Change Attribute</text>
+                        <text id="bundleName">ChangeAttribute.behavior</text>
+                        <text id="targetAttribute">self.aspects.graphics.attributes.flipHorizontally</text>
+                        <text id="RHS">false</text>
+                      </attributes>
+                    </behavior>
+                    <behavior id="id180258" class="AnimateBehavior" enabled="true">
+                      <attributes>
+                        <text id="name">Animate</text>
+                        <text id="bundleName">Animate.behavior</text>
+                        <text id="images">Buddy2	Buddy1</text>
+                        <index id="speed">6</index>
+                        <boolean id="loop">true</boolean>
+                        <boolean id="restoreActorImage">true</boolean>
+                      </attributes>
+                    </behavior>
+                    <behavior id="id862869" class="MoveBehavior" enabled="true">
+                      <attributes>
+                        <text id="name">Move</text>
+                        <text id="bundleName">Move.behavior</text>
+                        <angle id="direction">0</angle>
+                        <index id="space">0</index>
+                        <index id="moveType">0</index>
+                        <real id="speed">80</real>
+                        <boolean id="haltWhenBehaviorStops">true</boolean>
+                      </attributes>
+                    </behavior>
+                  </behaviors>
+                </behavior>
+              </behaviors>
+            </behavior>
+          </behaviors>
+          <aspects>
+            <graphics>
+              <attributes>
+                <integer id="tileWidth" name="tileWidth">0</integer>
+                <integer id="tileHeight" name="tileHeight">0</integer>
+              </attributes>
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id456893" prototype="id348576">
+          <attributes>
+            <point id="position">
+              <real id="x">13.5</real>
+              <real id="y">331</real>
+            </point>
+            <size id="size">
+              <real id="width">28</real>
+              <real id="height">6</real>
+            </size>
+          </attributes>
+          <aspects>
+            <graphics>
+              <attributes>
+                <integer id="tileWidth" name="tileWidth">0</integer>
+                <integer id="tileHeight" name="tileHeight">0</integer>
+              </attributes>
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+      </actors>
+      <attributes>
+        <text id="name">Background</text>
+        <boolean id="scrollable">true</boolean>
+      </attributes>
+    </layer>
+  </layers>
+  <attributes>
+    <text id="name">Outdoors</text>
+    <real id="time">0</real>
+    <size id="size">
+      <real id="width">480</real>
+      <real id="height">320</real>
+    </size>
+    <boolean id="wrapX">false</boolean>
+    <boolean id="wrapY">false</boolean>
+    <point id="gravity">
+      <real id="x">0</real>
+      <real id="y">0</real>
+    </point>
+    <color id="color">
+      <real id="red">0</real>
+      <real id="green">0</real>
+      <real id="blue">0</real>
+      <real id="alpha">1</real>
+    </color>
+    <rect id="camera">
+      <point id="origin">
+        <real id="x">0</real>
+        <real id="y">0</real>
+      </point>
+      <size id="size">
+        <real id="width">480</real>
+        <real id="height">320</real>
+      </size>
+      <size id="trackingArea">
+        <real id="width">400</real>
+        <real id="height">240</real>
+      </size>
+      <real id="rotation">0</real>
+    </rect>
+    <attributes id="autorotate">
+      <boolean id="landscapeLeft">true</boolean>
+      <boolean id="portrait">false</boolean>
+      <boolean id="landscapeRight">false</boolean>
+      <boolean id="portraitUpsideDown">false</boolean>
+    </attributes>
+  </attributes>
+</scene>
